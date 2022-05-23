@@ -1,4 +1,3 @@
-"""Блюпринт для показывания фото"""
 from flask import Blueprint, render_template, request
 import json
 import logging
