@@ -12,10 +12,10 @@ search_blueprint = Blueprint('search_blueprint', __name__,
 @search_blueprint.route('/search', methods=['GET'])
 def page_search():
     """Блюпринт поиска по словам"""
-    s = request.args['s'].lower()
+    s = request.args['s']
     posts = []
     posts_ = get_content(posts_path)
     for i in range(len(posts_)):
-        if s in posts_[i]['content']:
+        if s.lower() in posts_[i]['content']:
             posts.append(posts_[i])
     return render_template('search.html', posts=posts, len_posts=len(posts), s=s)

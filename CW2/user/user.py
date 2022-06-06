@@ -11,6 +11,5 @@ user_blueprint = Blueprint('user_blueprint', __name__,
 
 @user_blueprint.route('/users/<string:username>', methods=['GET'])
 def user_page(username):
-
     user_posts = get_posts_by_user(username)
     return render_template('user-feed.html', posts=user_posts, len_posts=len(user_posts))

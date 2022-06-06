@@ -5,7 +5,7 @@ from user.user import user_blueprint
 from utils import get_content, get_post_by_pk, get_comments_by_post_id
 import logging
 
-logging.basicConfig(filename='logs/api.log', level=logging.INFO)  # логирование ошибок
+#logging.basicConfig(filename='logs/api.log', level=logging.INFO)  # логирование ошибок
 posts_path = 'data/data.json' #расположение файла с постами
 comment_path = 'data/comments.json' #расположение файла с комментами
 

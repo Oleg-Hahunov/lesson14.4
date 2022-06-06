@@ -132,3 +132,32 @@ INFO:werkzeug:127.0.0.1 - - [05/Jun/2022 16:07:02] "GET /post/1 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2022 16:07:02] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2022 16:07:02] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [05/Jun/2022 16:07:02] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:30] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:30] "GET /static/css/styles.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:30] "GET /static/img/bookmark.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:30] "GET /static/img/eye.png HTTP/1.1" 200 -
+ERROR:main:Exception on /post/8 [GET]
+Traceback (most recent call last):
+  File "C:\Users\dbrain\Documents\sky-py\CW2\venv\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\dbrain\Documents\sky-py\CW2\venv\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\dbrain\Documents\sky-py\CW2\venv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\dbrain\Documents\sky-py\CW2\venv\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\dbrain\Documents\sky-py\CW2\main.py", line 26, in the_post
+    comments = get_comments_by_post_id(post_pk)
+  File "C:\Users\dbrain\Documents\sky-py\CW2\utils.py", line 42, in get_comments_by_post_id
+    raise ValueError('\u0442\u0430\u043a\u043e\u0433\u043e \u043f\u043e\u0441\u0442\u0430 \u043d\u0435\u0442 \u0438\u043b\u0438 \u0443 \u043d\u0435\u0433\u043e \u043d\u0435\u0442 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0435\u0432')
+ValueError: \u0442\u0430\u043a\u043e\u0433\u043e \u043f\u043e\u0441\u0442\u0430 \u043d\u0435\u0442 \u0438\u043b\u0438 \u0443 \u043d\u0435\u0433\u043e \u043d\u0435\u0442 \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0435\u0432
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:39] "[35m[1mGET /post/8 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:48] "GET /post/7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:48] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:48] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:48] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:57] "[36mGET /static/css/styles.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:57] "[36mGET /static/img/eye.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Jun/2022 22:11:57] "[36mGET /static/img/bookmark.png HTTP/1.1[0m" 304 -

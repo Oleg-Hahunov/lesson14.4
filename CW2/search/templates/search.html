@@ -5,6 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKYPROGRAM search</title>
+      <style>
+        .size {
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 5px;
+            text-overflow: ellipsis;
+        }
+
+    </style>
   <link href="/static/css/styles.min.css" rel="stylesheet">
 </head>
 
@@ -35,7 +44,7 @@
     <section class="items">
       <div class="items__item item">
         <div class="item__top">
-          <a href="/user/templates/user-feed.html" class="item__head">
+          <a href="/users/{{post.poster_name}}" class="item__head">
             <div class="item__ava-wrap">
               <img src={{ post.poster_avatar }} alt="" class="item__ava" width="47">
             </div>
@@ -45,7 +54,7 @@
         <a href="/post/{{ post.pk }}" class="item__post-link">
           <img src={{ post.pic }} alt="" width="348" class="item__post-img">
         </a>
-        <p class="item__descr"><a href="/templates/tag.htmls" class="item__tag"></a> Текст описания коротки...</p>
+        <p class="size"><a href="#" class="item__tag"></a> {{ post.content }}</p>
         <div class="item__post-info">
           <div class="item__counter">
             <img src="/static/img/eye.png" alt="" class="item__counter-icon" width="26">

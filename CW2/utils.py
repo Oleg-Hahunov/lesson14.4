@@ -32,14 +32,15 @@ def get_comments_by_post_id(post_id):
     Функция должна вызывать ошибку `ValueError` если такого поста нет и
     пустой список, если у поста нет комментов.
     """
-    comment_list = []
-    comments = get_content(comment_path)
-    for comment in comments:
-        if comment['post_id'] == post_id:
-            comment_list.append(comment)
-    if len(comment_list):
+    try:
+        comment_list = []
+        comments = get_content(comment_path)
+        for comment in comments:
+            if comment['post_id'] == post_id:
+                comment_list.append(comment)
         return comment_list
-    raise ValueError('такого поста нет или у него нет комментариев')
+    except ValueError:
+        return f'такого поста нет или у него нет комментариев'
 
 
 
